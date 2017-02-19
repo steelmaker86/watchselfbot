@@ -32,7 +32,7 @@ async def on_message(message):
 	elif command.startswith('+time'):
 		await reply(message, time.ctime())
 	elif command.startswith('+info'):
-		await reply (message, 'I am watchbot, a discord selfbot that tells the time, I am on version:' + VERSION + 'made in python. I was also inspired by the selfbot [RDT]Test Made!! find me at: https://github.com/Steelmaker86/watchselfbot !')
+		await reply (message, 'I am watchbot, a discord selfbot that tells the time, I am on version: ' + VERSION + 'made in python. I was also inspired by the selfbot [RDT]Test Made!! find me at: https://github.com/Steelmaker86/watchselfbot !')
 
 ##async def reply(message, text):
 ##	await client.send_message(message.channel, message.author.mention + ', ' + text)
