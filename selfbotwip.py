@@ -38,4 +38,4 @@ async def on_message(message):
 async def reply(message, text):
 	await client.edit_message(message, message.author.mention + ', ' + text)
 
-client.run('steelmaker86@gmail.com','coke&mentos')
+client.run('email','password')
