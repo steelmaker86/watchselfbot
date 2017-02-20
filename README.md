@@ -13,4 +13,4 @@ steps for usage:
 --------------------------------------------------------------~UPDATES~--------------------------------------------------------------
 0.0.1 - +shutdown and +time were made AKA bot was made!                                                                                   
 0.0.2 - +antigrav and +info were made!                                                                                                     
-0.0.3 - +execute and +evaluate were made!
+0.0.3 - 
