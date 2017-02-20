@@ -35,9 +35,9 @@ async def on_message(message):
 		await reply(message, 'I am watchbot, a discord selfbot made by Nukekin that tells the time, and I also have other random stuff. I am on version: ' + VERSION + ' I was made in python. I was also inspired by the selfbot [RDT]Test made!! find me at: https://github.com/Steelmaker86/watchselfbot !')
 	elif command.startswith('+antigrav'):
 		await reply(message, 'importing the dopest antigravity memz 35%')
-		time.sleep(3)
+		time.sleep(2)
 		await reply(message, 'importing the dopest antigravity memz 69%')
-		time.sleep(8)
+		time.sleep(4)
 		await reply(message, 'imported the dopest antigravity memz 420%')
 		import antigravity
 
