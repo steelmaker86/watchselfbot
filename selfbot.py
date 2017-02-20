@@ -30,7 +30,7 @@ async def on_message(message):
 		await reply(message, 'turning off...')
 		await client.logout()
 	elif command.startswith('+time'):
-		await reply(message, time.ctime())
+		await reply(message, 'The date and time is: ' + time.ctime())
 	elif command.startswith('+info'):
 		await reply(message, 'I am watchbot, a discord selfbot made by Nukekin that tells the time, and I also have other random stuff. I am on version: ' + VERSION + ' I was made in python. I was also inspired by the selfbot [RDT]Test made!! find me at: https://github.com/Steelmaker86/watchselfbot !')
 	elif command.startswith('+antigrav'):
