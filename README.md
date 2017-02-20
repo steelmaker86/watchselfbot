@@ -6,7 +6,7 @@ steps for usage:
 2. activate the bot with the .bat file or selfbot.py
 3. use +time and see if it works!
 
------------~FEATURES~-----------
+--------------------------------------------------------------~FEATURES~--------------------------------------------------------------
 +time - shows the time and date. DUH
 +shutdown - shuts down the selfbot. IT'S SIMPLE
 +info - shows the credits and the github page aka: github.com/steelmaker86/watchselfbot
