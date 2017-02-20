@@ -4,21 +4,6 @@ import sys
 from io import BytesIO, StringIO
 import time
 
-try
-    assert sys.version_info >= (3, 5)
-	import discord
-except ImportError:
-    print("Discord.py is not installed.\n"
-          "install discord.py\n"
-          "and retry.\n"
-          "https://github.com/Rapptz/discord.py\n")
-    sys.exit()
-except AssertionError:
-	print ("python is either not \n"
-		  "or is in a version less than 3.5\n"
-		  "install python 3.5 or higher at: python.org\n"
-	sys.exit()
-
 client = discord.Client()
 VERSION = '0.0.2.'
 
