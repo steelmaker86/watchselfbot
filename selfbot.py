@@ -6,7 +6,7 @@ from io import BytesIO, StringIO
 import time
 
 client = discord.Client()
-VERSION = '0.0.1.'
+VERSION = '0.0.2.'
 
 @client.event
 async def on_ready():
@@ -32,11 +32,13 @@ async def on_message(message):
 	elif command.startswith('+time'):
 		await reply(message, time.ctime())
 	elif command.startswith('+info'):
-		await reply (message, 'I am watchbot, a discord selfbot that tells the time, I am on version: ' + VERSION + 'made in python. I was also inspired by the selfbot [RDT]Test Made!! find me at: https://github.com/Steelmaker86/watchselfbot !')
-
-##async def reply(message, text):
+		await reply(message, 'I am watchbot, a discord selfbot made by Nukekin that tells the time, and I also have other random stuff. I am on version: ' + VERSION + ' I was made in python. I was also inspired by the selfbot [RDT]Test made!! find me at: https://github.com/Steelmaker86/watchselfbot !')
+	elif command.startswith('+antigrav'):
+		await reply(message, 'imported the dopest antigravity memz 100%')
+		import antigravity
+		
+		##async def reply(message, text):
 ##	await client.send_message(message.channel, message.author.mention + ', ' + text)
-
 async def reply(message, text):
 	await client.edit_message(message, message.author.mention + ', ' + text)
 
