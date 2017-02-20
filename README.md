@@ -12,4 +12,5 @@ steps for usage:
 +antigrav - imports the magical antigravity module (**can be used only once every time the bot is ran, so once you use it,  you need to run the bot again to use it again**)                                                                                                       
 --------------------------------------------------------------~UPDATES~--------------------------------------------------------------
 0.0.1 - +shutdown and +time were made AKA bot was made!                                                                                   
-0.0.2 - +antigrav and +info were made!
+0.0.2 - +antigrav and +info were made!                                                                                                     
+0.0.3 - +execute and +evaluate were made!
