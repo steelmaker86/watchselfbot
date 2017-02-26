@@ -6,7 +6,7 @@ from io import BytesIO, StringIO
 import time
 
 client = discord.Client()
-VERSION = '0.0.2.'
+VERSION = '0.0.3.'
 
 @client.event
 async def on_ready():
