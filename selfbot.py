@@ -40,6 +40,8 @@ async def on_message(message):
 		time.sleep(4)
 		await reply(message, 'imported the dopest antigravity memz 420%')
 		import antigravity
+	elif command.startswith('+lenny'):
+		await reply(message, '( ͡° ͜ʖ ͡°)')
 
 ##async def reply(message, text):
 ##	await client.send_message(message.channel, message.author.mention + ', ' + text)
