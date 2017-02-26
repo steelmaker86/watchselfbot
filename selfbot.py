@@ -1,3 +1,4 @@
+import discord
 import asyncio
 import traceback
 import sys
