@@ -42,10 +42,12 @@ async def on_message(message):
 		import antigravity
 	elif command.startswith('+lenny'):
 		await reply(message, '( ͡° ͜ʖ ͡°)')
+	elif command.startswith('+blank'):
+		await reply(message, '')
 
 ##async def reply(message, text):
 ##	await client.send_message(message.channel, message.author.mention + ', ' + text)
 async def reply(message, text):
-	await client.edit_message(message, message.author.mention + ', ' + text)
+	await client.edit_message(message, text)
 
 client.run('email','password')
