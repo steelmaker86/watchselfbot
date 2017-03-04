@@ -24,11 +24,11 @@ async def on_ready():
 async def on_message(message):
 	if message.author.id != client.user.id:
 		return
-	if message.content.startswith('+'):
+	if message.content.startswith('config.prefix'):
 		print('Command: ' + message.content)
 	command = message.content
 	parameters = ' '.join(message.content.strip().split(' ')[1:])
-	if command.startswith("+shutdown"):
+	if command.startswith(prefix +"shutdown"):
 		await reply(message, 'turning off...')
 		await client.logout()
 	elif command.startswith(prefix + 'time'):
