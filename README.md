@@ -15,4 +15,5 @@ steps for usage:
 --------------------------------------------------------------~UPDATES~--------------------------------------------------------------
 0.0.1 - +shutdown and +time were made AKA bot was made!                                                                                   
 0.0.2 - +antigrav and +info were made!                                                                                                     
-0.0.3 - +lenny and +blank commands were made!
+0.0.3 - +lenny and +blank commands were made!                                                                                             
+0.0.4 - +minor rewrite + new config file!
