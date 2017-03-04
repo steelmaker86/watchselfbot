@@ -1,3 +1,3 @@
 prefix = '+'
-email = 'steelmaker86@gmail.com'
-password = 'alaskaiscoolerthanu'
+email = 'email'
+password = 'password'
