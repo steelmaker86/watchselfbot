@@ -7,7 +7,7 @@ import time
 import config
 
 client = discord.Client()
-VERSION = '0.0.3.'
+VERSION = '0.0.4.'
 prefix = config.prefix
 
 @client.event
