@@ -17,4 +17,4 @@ steps for usage:
 0.0.2 - +antigrav and +info were made!                                                                                                     
 0.0.3 - +lenny and +blank commands were made!                                                                                             
 0.0.4 - minor rewrite + new config file!                                                                                                 
-0.0.5 - RICHEMBED WAS ADDED TO +INFO! MAKE SURE YOUR DISCORD.PY IS UP TO DATE!
+0.0.5 - RICHEMBED WAS ADDED TO +INFO! MAKE SURE YOUR DISCORD.PY IS UP TO DATE! D: deleted +blank 'cause i had to.
