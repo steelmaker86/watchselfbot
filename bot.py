@@ -55,8 +55,7 @@ async def on_message(message):
 		import antigravity
 	elif command.startswith(prefix + 'lenny'):
 		await reply(message, '( ͡° ͜ʖ ͡°)')
-	elif command.startswith(prefix + 'blank'):
-		await reply(message, '')
+
 		##async def reply(message, text):
 ##	await client.send_message(message.channel, message.author.mention + ', ' + text)
 
