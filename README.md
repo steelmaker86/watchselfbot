@@ -11,7 +11,7 @@ steps for usage:
 +info - shows the credits and the github page aka: github.com/steelmaker86/watchselfbot
 +antigrav - imports the magical antigravity module (**can be used only once every time the bot is ran, so once you use it,  you need to run the bot again to use it again**)                                                                                                       
 +lenny - shows the magical lenny face                                                                                                     
-+ppap - ppap
++ppap - ppap                                                                                                                               
 ---------------------------------------------------------------UPDATES---------------------------------------------------------------
 0.0.1 - +shutdown and +time were made AKA bot was made!                                                                                   
 0.0.2 - +antigrav and +info were made!                                                                                                     
