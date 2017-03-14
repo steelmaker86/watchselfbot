@@ -8,7 +8,7 @@ import time
 import config
 
 embed = discord.embeds.Embed(colour=0xff0000)
-VERSION = '0.0.5.'
+VERSION = '0.0.6.'
 about = 'I am watchbot, a discord selfbot made by <@212589934966472704> that tells the time, and I also have other random stuff. I am on version: ' + VERSION +  ' I was made in python. I was also inspired by the selfbot [RDT]Test made!! find me at: https://github.com/Steelmaker86/watchselfbot !'
 client = discord.Client()
 prefix = config.prefix
@@ -44,6 +44,7 @@ async def on_message(message):
 		await client.edit_message(message, 'The time and date is: ' + time.ctime())
 	elif command.startswith(prefix +'info'):
 		try:
+			await client.edit_message(message, " ")
 			await client.edit_message(message, embed = embed)
 		except discord.HTTPException:
 			await client.edit_message(message, "I need the `Embed links` permission "
