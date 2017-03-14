@@ -41,33 +41,30 @@ async def on_message(message):
 		await reply(message, 'turning off...')
 		await client.logout()
 	elif command.startswith(prefix + 'time'):
-		await reply(message, 'The time and date is: ' + time.ctime())
+		await client.edit_message(message, 'The time and date is: ' + time.ctime())
 	elif command.startswith(prefix +'info'):
 		try:
 			await client.edit_message(message, embed = embed)
 		except discord.HTTPException:
-			await reply(message, "I need the `Embed links` permission "
+			await client.edit_message(message, "I need the `Embed links` permission "
                                "to send this")
 	elif command.startswith(prefix + 'antigrav'):
-		await reply(message, 'importing the dopest antigravity memz 35%')
+		await client.edit_message(message, 'importing the dopest antigravity memz 35%')
 		time.sleep(2)
-		await reply(message, 'importing the dopest antigravity memz 69%')
+		await client.edit_message(message, 'importing the dopest antigravity memz 69%')
 		time.sleep(4)
-		await reply(message, 'imported the dopest antigravity memz 420%')
+		await client.edit_message(message, 'imported the dopest antigravity memz 420%')
 		import antigravity
 	elif command.startswith(prefix + 'lenny'):
-		await reply(message, '( ͡° ͜ʖ ͡°)')
+		await client.edit_message(message, '( ͡° ͜ʖ ͡°)')
 	elif command.startswith(prefix + 'help'):
 		await client.edit_message(message, 'Here are my commands, If you need some info:\n' 
 		 'go to the readme.md file.\n'
 		 'My commands are: antigrav, help, info,\n' 
 		 'time, shutdown, and lenny\n')
-		
-		##async def reply(message, text):
-##	await client.send_message(message.channel, message.author.mention + ', ' + text)
+	elif command.startswith(prefix + 'ppap'):
+		await client.edit_message(message, "I have an pineapple. I have a pen. UH! Pinapple Pen!\n"
+		"I have an apple. I have a pen. UH! Apple Pen!\n"
+		"Apple Pen, Pineapple Pen. UH! Pen Pineapple apple pen!\n")
 
-async def reply(message, text):
-	await client.edit_message(message, text)
-async def repost(message, text):
-    await client.send_message(message, text)
 client.run(config.email, config.password)
