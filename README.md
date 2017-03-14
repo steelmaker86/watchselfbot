@@ -17,4 +17,4 @@ steps for usage:
 0.0.3 - +lenny and +blank commands were made!                                                                                             
 0.0.4 - minor rewrite + new config file!                                                                                                 
 0.0.5 - RICHEMBED WAS ADDED TO +INFO! MAKE SURE YOUR DISCORD.PY IS UP TO DATE! Deleted +blank 'cause i had to. D:                         
-0.0.6 - footer added to +info
+0.0.6 - footer added to +info + PPAP command                                                                                               
