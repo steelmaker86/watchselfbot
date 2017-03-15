@@ -9,7 +9,7 @@ import config
 
 author_repo = 'https://github.com/steelmaker86/watchselfbot'
 embed = discord.embeds.Embed(colour=0xff0000)
-VERSION = '0.0.67.'
+VERSION = '0.0.7.'
 about = (
 "I am watchbot, a discord selfbot made by <@212589934966472704> that tells the time,\n"
 "and I also have other random stuff. I am on version: " + VERSION +  " I was made in python.\n"
@@ -70,8 +70,8 @@ async def on_message(message):
 		 'My commands are: antigrav, help, info,\n' 
 		 'time, shutdown, lenny, and ppap\n')
 	elif command.startswith(prefix + 'ppap'):
-		await client.edit_message(message, "I have an pineapple. I have a pen. UH! Pinapple Pen!\n"
-		"I have an apple. I have a pen. UH! Apple Pen!\n"
+		await client.edit_message(message, "I have an apple. I have a pen. UH! Apple Pen!\n"
+		"I have a pineapple. I have a pen. UH! pineapple Pen!\n"
 		"Apple Pen, Pineapple Pen. UH! Pen Pineapple apple pen!\n")
 
 client.run(config.email, config.password)
