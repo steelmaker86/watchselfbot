@@ -19,4 +19,4 @@ steps for usage:
 0.0.4 - minor rewrite + new config file!                                                                                                 
 0.0.5 - RICHEMBED WAS ADDED TO +INFO! MAKE SURE YOUR DISCORD.PY IS UP TO DATE! Deleted +blank 'cause i had to. D:                         
 0.0.6 - footer added to +info + PPAP command                                                                                               
-0.0.7 - Thumbnail and owner things added to the +info command!
+0.0.7 - mashed link, a thumbnail and an owner field added to the +info command!
