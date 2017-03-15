@@ -1,7 +1,7 @@
 # watchselfbot
 (**REQUIRES DISCORD.PY AND PYTHON**)
 steps for usage: 
-1. insert your email and password in the email and password are in config.py
+1. insert your email and password in the email and password places in config.py
 2. activate the bot with the .bat file or selfbot.py
 3. use +time and see if it works!
 
