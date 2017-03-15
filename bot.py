@@ -9,19 +9,22 @@ import config
 
 author_repo = 'https://github.com/steelmaker86/watchselfbot'
 embed = discord.embeds.Embed(colour=0xff0000)
-VERSION = '0.0.7.'
+VERSION = '0.0.7'
 about = (
-"I am watchbot, a discord selfbot made by <@212589934966472704> that tells the time,\n"
-"and I also have other random stuff. I am on version: " + VERSION +  " I was made in python.\n"
-"I was also inspired by the selfbot [RDT]Test made!! You can find me [HERE!]({})"
+"I am watchbot, a discord selfbot made by <@212589934966472704> that tells the\n"
+"time, and I also have other random stuff. I am on version: " + VERSION + 
+". I was made in python. I was also inspired by the selfbot [RDT]Test made!! You can find me [HERE!]({})\n"
 "".format(author_repo))
 client = discord.Client()
 prefix = config.prefix
 embed.add_field(name="Language", value="Python", inline=True)
 embed.add_field(name="Api Wrapper", value="Discord.py", inline=True)
-embed.add_field(name="Version", value="0.0.5", inline=True)
+embed.add_field(name="Version", value=VERSION, inline=True)
+embed.add_field(name="Creator", value="Nukeking", inline=True)
 embed.add_field(name="About Me", value=about, inline=False)
 embed.set_footer(text="Made to help discordians since 2-19-2017!")
+embed.set_thumbnail(url='http://i.picresize.com/images/2017/03/15/TlYWM.png')
+
 
 @client.event
 async def on_ready():
@@ -33,7 +36,7 @@ async def on_ready():
 	print(client)
 	print('Startup at: ' + startup)
 
-	
+
 
 @client.event
 async def on_message(message):
