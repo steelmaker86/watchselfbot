@@ -8,7 +8,7 @@ import time
 import config
 
 embed = discord.embeds.Embed(colour=0xff0000)
-VERSION = '0.0.7.'
+VERSION = '0.0.6.'
 about = 'I am watchbot, a discord selfbot made by <@212589934966472704> that tells the time, and I also have other random stuff. I am on version: ' + VERSION +  ' I was made in python. I was also inspired by the selfbot [RDT]Test made!! find me at: https://github.com/Steelmaker86/watchselfbot !'
 client = discord.Client()
 prefix = config.prefix
