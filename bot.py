@@ -8,7 +8,7 @@ import time
 import config
 
 embed = discord.embeds.Embed(colour=0xff0000)
-VERSION = '0.0.6.'
+VERSION = '0.0.7.'
 about = 'I am watchbot, a discord selfbot made by <@212589934966472704> that tells the time, and I also have other random stuff. I am on version: ' + VERSION +  ' I was made in python. I was also inspired by the selfbot [RDT]Test made!! find me at: https://github.com/Steelmaker86/watchselfbot !'
 client = discord.Client()
 prefix = config.prefix
@@ -17,6 +17,7 @@ embed.add_field(name="Api Wrapper", value="Discord.py", inline=True)
 embed.add_field(name="Version", value="0.0.5", inline=True)
 embed.add_field(name="About Me", value=about, inline=False)
 embed.set_footer(text="Made to help discordians since 2-19-2017!")
+
 @client.event
 async def on_ready():
 	startup = time.ctime()
@@ -62,7 +63,7 @@ async def on_message(message):
 		await client.edit_message(message, 'Here are my commands, If you need some info:\n' 
 		 'go to the readme.md file.\n'
 		 'My commands are: antigrav, help, info,\n' 
-		 'time, shutdown, and lenny\n')
+		 'time, shutdown, lenny, and ppap\n')
 	elif command.startswith(prefix + 'ppap'):
 		await client.edit_message(message, "I have an pineapple. I have a pen. UH! Pinapple Pen!\n"
 		"I have an apple. I have a pen. UH! Apple Pen!\n"
