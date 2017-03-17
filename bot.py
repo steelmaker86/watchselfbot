@@ -10,7 +10,7 @@ import config
 client = discord.Client()
 author_repo = 'https://github.com/steelmaker86/watchselfbot'
 embed = discord.embeds.Embed(colour=0xff0000)
-VERSION = '0.0.7'
+VERSION = '0.0.8'
 about = (
 "I am watchbot, a discord selfbot made by <@212589934966472704> that tells the\n"
 "time, and I also have other random stuff. I am currently on\n"
@@ -78,7 +78,5 @@ async def on_message(message):
 		await client.edit_message(message, "I have an apple. I have a pen. UH! Apple Pen!\n"
 		"I have a pineapple. I have a pen. UH! pineapple Pen!\n"
 		"Apple Pen, Pineapple Pen. UH! Pen Pineapple apple pen!\n")
-	elif command.startswith(prefix + 'communism'):
-		await client.edit_message(message, 'Communism is annoying, but here you go... ☭')
 
 client.run(config.email, config.password)
