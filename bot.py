@@ -73,7 +73,7 @@ async def on_message(message):
 		await client.edit_message(message, 'Here are my commands, If you need some info:\n' 
 		 'go to the readme.md file.\n'
 		 'My commands are: antigrav, help, info,\n' 
-		 'time, shutdown, lenny, and ppap\n')
+		 'time, shutdown, lenny, communism, ppap.\n')
 	elif command.startswith(prefix + 'ppap'):
 		await client.edit_message(message, "I have an apple. I have a pen. UH! Apple Pen!\n"
 		"I have a pineapple. I have a pen. UH! pineapple Pen!\n"
