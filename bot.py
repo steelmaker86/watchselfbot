@@ -6,10 +6,9 @@ import sys
 from io import BytesIO, StringIO
 import time
 import config
-
+embed = discord.embeds.Embed(colour=0xff0000)
 client = discord.Client()
 author_repo = 'https://github.com/steelmaker86/watchselfbot'
-embed = discord.embeds.Embed(colour=0xff0000)
 VERSION = '0.0.8'
 about = (
 "I am watchbot, a discord selfbot made by <@212589934966472704> that tells the\n"
@@ -29,16 +28,7 @@ async def on_ready():
 	print('~~~~~~~~~~~')
 	print(client)
 	print('Startup at: ' + startup)
-	user = client.user.name
-	embed.set_author(name='Watchselfbot', url='http://github.com/steelmaker86/watchselfbot', icon_url=Embed.Empty)
-	embed.add_field(name="Instance owned by:", value=user, inline=True)
-	embed.add_field(name="Language", value="Python", inline=True)
-	embed.add_field(name="Api Wrapper", value="Discord.py", inline=True)
-	embed.add_field(name="Version", value=VERSION, inline=True)
-	embed.add_field(name="About Me", value=about, inline=False)
-	embed.set_footer(text="Made to help discordians since 2-19-2017!")
-	embed.set_thumbnail(url='http://i.picresize.com/images/2017/03/15/TlYWM.png')
-
+	embed = None
 
 @client.event
 async def on_message(message):
@@ -54,6 +44,16 @@ async def on_message(message):
 	elif command.startswith(prefix + 'time'):
 		await client.edit_message(message, 'The time and date is: ' + time.ctime())
 	elif command.startswith(prefix +'info'):
+		embed = discord.embeds.Embed(colour=0xff0000)
+		user=client.user.name
+		embed.set_author(name='Watchselfbot', url='http://github.com/steelmaker86/watchselfbot', icon_url=Embed.Empty)
+		embed.add_field(name="Instance owned by:", value=user, inline=True)
+		embed.add_field(name="Language", value="Python", inline=True)
+		embed.add_field(name="Api Wrapper", value="Discord.py", inline=True)
+		embed.add_field(name="Version", value=VERSION, inline=True)
+		embed.add_field(name="About Me", value=about, inline=False)
+		embed.set_footer(text="Made to help discordians since 2-19-2017!")
+		embed.set_thumbnail(url='http://i.picresize.com/images/2017/03/15/TlYWM.png')
 		try:
 			await client.edit_message(message, " ")
 			await client.edit_message(message, embed = embed)
@@ -78,5 +78,7 @@ async def on_message(message):
 		await client.edit_message(message, "I have an apple. I have a pen. UH! Apple Pen!\n"
 		"I have a pineapple. I have a pen. UH! pineapple Pen!\n"
 		"Apple Pen, Pineapple Pen. UH! Pen Pineapple apple pen!\n")
+	elif command.startswith(prefix + 'communism'):
+		await client.edit_message(message, 'Communism is annoying, but here you go... ☭')
 
 client.run(config.email, config.password)
