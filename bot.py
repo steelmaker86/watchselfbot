@@ -86,11 +86,6 @@ async def on_message(message):
 		await client.edit_message(message, "I have an apple. I have a pen. UH! Apple Pen!\n"
 		"I have a pineapple. I have a pen. UH! pineapple Pen!\n"
 		"Apple Pen, Pineapple Pen. UH! Pen Pineapple apple pen!\n")
-	elif command.startswith(prefix + 'communism'):
-		await client.edit_message(message, 'Communism is annoying, but here you go... ☭')
-	elif command.startswith(prefix + 'typing'):
-		client.send_typing(message.channel)
-		await client.edit_message(message, 'Successfully started typing!')
 	elif command.startswith(prefix + 'ping'):
 		ts = message.timestamp
 		new_msg = await client.edit_message(message, 'PONG!')
