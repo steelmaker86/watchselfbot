@@ -6,6 +6,8 @@ import sys
 from io import BytesIO, StringIO
 import time
 import config
+import datetime
+
 embed = discord.embeds.Embed(colour=0xff0000)
 client = discord.Client()
 author_repo = 'https://github.com/steelmaker86/watchselfbot'
@@ -17,6 +19,8 @@ about = (
 "selfbot [RDT]Test made!! You can find me [HERE!]({})\n"
 "".format(author_repo))
 prefix = config.prefix
+thoriumstatus = 'rekt'
+bork = 'real'
 
 
 @client.event
@@ -28,16 +32,19 @@ async def on_ready():
 	print('~~~~~~~~~~~')
 	print(client)
 	print('Startup at: ' + startup)
-	embed = None
+	embed.clear_fields()
 
 @client.event
 async def on_message(message):
+	prefix = config.prefix
+	arguments = ' '.join(message.content.strip().split(' ')[1:])
+	cmd_string_bool = message.content.startswith(prefix)
+	cmd_string = message.content
 	if message.author.id != client.user.id:
 		return
-	if message.content.startswith(prefix):
-		print('Command: ' + message.content)
+	if cmd_string_bool:
+		print('Command: {0} with arguments: {1}'.format(cmd_string, arguments))
 	command = message.content
-	parameters = ' '.join(message.content.strip().split(' ')[1:])
 	if command.startswith(prefix + "shutdown"):
 		await reply(message, 'turning off...')
 		await client.logout()
@@ -45,6 +52,7 @@ async def on_message(message):
 		await client.edit_message(message, 'The time and date is: ' + time.ctime())
 	elif command.startswith(prefix +'info'):
 		embed = discord.embeds.Embed(colour=0xff0000)
+		embed.clear_fields
 		user=client.user.name
 		embed.set_author(name='Watchselfbot', url='http://github.com/steelmaker86/watchselfbot', icon_url=Embed.Empty)
 		embed.add_field(name="Instance owned by:", value=user, inline=True)
@@ -80,5 +88,40 @@ async def on_message(message):
 		"Apple Pen, Pineapple Pen. UH! Pen Pineapple apple pen!\n")
 	elif command.startswith(prefix + 'communism'):
 		await client.edit_message(message, 'Communism is annoying, but here you go... ☭')
+	elif command.startswith(prefix + 'typing'):
+		client.send_typing(message.channel)
+		await client.edit_message(message, 'Successfully started typing!')
+	elif command.startswith(prefix + 'ping'):
+		ts = message.timestamp
+		new_msg = await client.edit_message(message, 'PONG!')
+		latency = new_msg.edited_timestamp - ts
+		if latency.microseconds >= 1000000:
+			await client.edit_message(message, 'PONG! It took {} miliseconds, or {} seconds to respond!'.format(latency.microseconds // 1000, latency.microseconds / 1000000))
+		else:
+			await client.edit_message(message, 'PONG! It took {} miliseconds to respond!'.format(latency.microseconds // 1000))
+	elif command.startswith(prefix + 'eval'):
+		if arguments == '':
+			await client.edit_message(message, 'Please add something to evaluate')
+		else:
+			output = eval(arguments)
+			await client.edit_message(message, '**Input:**\n```{0}```\n**Output: **\n```{1}\n```'.format(arguments, output))
+	elif command.startswith(prefix + 'cmeme'):
+		embed = discord.embeds.Embed(color=0xff0000)
+		embed.clear_fields()
+		if arguments == '':
+			client.edit_message(message, 'Please add arguments as shown: (backround picture name),(top text),(bottom text)')
+		else:
+			urlend = arguments.replace(',', '/')
+			urlend = urlend.replace(' ', '_')
+			meme = 'http://urlme.me/' + urlend
+			embed.set_image(url=meme)
+			embed.set_author(name='Custom Meme Generator')
+			await client.edit_message(message, ' ')
+			await client.edit_message(message, embed = embed)
+	elif command.startswith(prefix + 'newprefix'):
+		config.prefix = arguments
+		client.edit_message(message, "Successfully changed prefix to: {} !".format(arguments))
+	elif command.startswith(prefix + 'secretcom'):
+		client.edit_message(message, "The legend of Gabe the Dog is known to be one of the few legends that is true. So one day, there was grumpy cat, a grumpy cat, and she was a meme. So then, there was a dog that was cuter than you and wanted to be a meme like grumpy cat called Gabe, so he put on obey hats and deal with it glasses by digesting Mtn. Dew and Doritos, but he didn't the respect he needed. So he listened to BE A MEME from memelan, then, he got inspired by it, so then he started barking to it like he was a dope meme more dope then you. Then he saw gravity memes. So he started to bark to it. Then, the very next day, the owner posted a DANK MEME non-clickbait youtube video of him barking. Then the memes more dank than you were posted all over social medias. Then.The best meme came. He challenged Gabe in a battle. He was almost KOed, but with his last milliter of energy. Something happened. HE 360 NOSCOPED HIM AND HE BECAME THE DANKEST MEME OF ALL THAT WILL NEVER BE DEFEATED! That is how the TRUE legend of Gabe the Dog went."
 
 client.run(config.email, config.password)
