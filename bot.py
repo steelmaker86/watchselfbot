@@ -11,7 +11,7 @@ import datetime
 embed = discord.embeds.Embed(colour=0xff0000)
 client = discord.Client()
 author_repo = 'https://github.com/steelmaker86/watchselfbot'
-VERSION = '0.0.8'
+VERSION = '0.1'
 about = (
 "I am watchbot, a discord selfbot made by <@212589934966472704> that tells the\n"
 "time, and I also have other random stuff. I am currently on\n"
