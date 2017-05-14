@@ -1,5 +1,5 @@
 # watchselfbot
-(**REQUIRES DISCORD.PY AND PYTHON**)
+(**REQUIRES DISCORD.PY AND PYTHON**)                                                                                                       
 steps for usage:                                                                                                                           
 1. open the update-discordpy.bat file to get discord.py                                                                                   
 2. insert your email and password in the email and password places in config.py
