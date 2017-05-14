@@ -26,5 +26,5 @@ steps for usage:
 0.0.5 - RICHEMBED WAS ADDED TO +INFO! MAKE SURE YOUR DISCORD.PY IS UP TO DATE! Deleted +blank 'cause i had to. D:                         
 0.0.6 - Footer added to +info + PPAP command                                                                                               
 0.0.7 - Mashed link, a thumbnail and an owner field added to the +info command!                                                           
-0.0.8 - Author area added to +info!
+0.0.8 - Author area added to +info!                                                                                                       
 0.1 - Many new commands added + secret command... ( ͡° ͜ʖ ͡°)
