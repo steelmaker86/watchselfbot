@@ -1,10 +1,10 @@
 # watchselfbot
 (**REQUIRES DISCORD.PY AND PYTHON**)
 steps for usage:                                                                                                                           
-0. open the update-discordpy.bat file to get discord.py                                                                                   
-1. insert your email and password in the email and password places in config.py
-2. activate the bot with the .bat file or selfbot.py
-3. use +time and see if it works!
+1. open the update-discordpy.bat file to get discord.py                                                                                   
+2. insert your email and password in the email and password places in config.py
+3. activate the bot with the .bat file or selfbot.py
+4. use +time and see if it works!
 
 ---------------------------------------------------------------FEATURES---------------------------------------------------------------
 +time - shows the time and date. DUH                                                                                                       
