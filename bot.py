@@ -7,7 +7,7 @@ from io import BytesIO, StringIO
 import time
 import config
 import datetime
-
+import math
 embed = discord.embeds.Embed(colour=0xff0000)
 client = discord.Client()
 author_repo = 'https://github.com/steelmaker86/watchselfbot'
